@@ -21,4 +21,12 @@ public class SaveCalculatorTest {
         int value2= (-20);
         assertTrue(testee.summe(value1,value2)==(-30));
     }
+
+    @Test
+    public void testDifferenzWithZweiPositiveIsOk() {
+        SaveCalculator testee = new SaveCalculator();
+        int value1 = 10;
+        int value2= 5;
+        assertTrue(testee.differenz(value1,value2)==5);
+    }
 }
