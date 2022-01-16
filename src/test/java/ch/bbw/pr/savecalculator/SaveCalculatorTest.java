@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class SaveCalculatorTest {
 
     @Test
-    public void summe() {
+    public void testSummeZweiPositiveIstOk() {
         SaveCalculator testee = new SaveCalculator();
         int value1 = 10;
         int value2= 20;
