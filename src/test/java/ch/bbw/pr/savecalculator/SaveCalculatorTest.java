@@ -36,6 +36,7 @@ public class SaveCalculatorTest {
         assertTrue(testee.summe(value1,value2)==(-30));
     }
 
+    //ExceptionHandling
     @Test(expected=ArithmeticException.class)
     public void testArithmeticException() {
         ArrayList emptyList = new ArrayList();
@@ -57,5 +58,13 @@ public class SaveCalculatorTest {
         int value1 = 10;
         int value2= 5;
         assertTrue(testee.differenz(value1,value2)==5);
+    }
+
+    @Test
+    public void multiplikation() {
+        int value1 = 2;
+        int value2 = 3;
+        assertTrue(testee.multiplikation(value1,value2)==(6));
+
     }
 }

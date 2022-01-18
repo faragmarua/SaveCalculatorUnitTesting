@@ -20,8 +20,10 @@ public class PrivateTest {
 
     }
 
+    //Versucht reflection umzusetzen, funktioniert leider noch nicht
     @Test
     public void testDividendWorks() throws Exception {
+
         Method divisionMethod = SaveCalculator.class.getDeclaredMethod("division", int.class, int.class);
         divisionMethod.setAccessible(true);
         int value1 = (int)  divisionMethod.invoke(SaveCalculator.class, 10);
