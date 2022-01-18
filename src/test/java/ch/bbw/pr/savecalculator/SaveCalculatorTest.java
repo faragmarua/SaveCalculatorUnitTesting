@@ -1,14 +1,25 @@
 package ch.bbw.pr.savecalculator;
 
 import org.junit.Test;
+import org.junit.*;
+import static org.junit.Assert.*;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
 public class SaveCalculatorTest {
 
+    private SaveCalculator testee = new SaveCalculator();
+
+
+    @Before
+    public void executedBeforeEach() {
+        SaveCalculator testee = new SaveCalculator();
+
+    }
+
     @Test
     public void testSummeZweiPositiveIstOk() {
-        SaveCalculator testee = new SaveCalculator();
         int value1 = 10;
         int value2= 20;
         assertTrue(testee.summe(value1,value2)==30);
@@ -16,7 +27,6 @@ public class SaveCalculatorTest {
 
     @Test
     public void testSummeZweiNegativeIsOk() {
-        SaveCalculator testee = new SaveCalculator();
         int value1 = (-10);
         int value2= (-20);
         assertTrue(testee.summe(value1,value2)==(-30));
@@ -24,7 +34,6 @@ public class SaveCalculatorTest {
 
     @Test
     public void testDifferenzWithZweiPositiveIsOk() {
-        SaveCalculator testee = new SaveCalculator();
         int value1 = 10;
         int value2= 5;
         assertTrue(testee.differenz(value1,value2)==5);
