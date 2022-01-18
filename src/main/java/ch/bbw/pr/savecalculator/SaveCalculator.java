@@ -26,8 +26,8 @@ public class SaveCalculator {
 		return minuend - subtrahend;
 	}
 
-	//Unit Test in fiile PrivateTest
-	private double division(int dividend, int divisor) throws ArithmeticException {
+	//Unit Test in file PrivateTest
+	public double division(int dividend, int divisor) throws ArithmeticException {
 		long value = (long) dividend / (long) divisor;
 		if ((value > Integer.MAX_VALUE) || (value < Integer.MIN_VALUE) || (value != 0)) {
 			throw new ArithmeticException();

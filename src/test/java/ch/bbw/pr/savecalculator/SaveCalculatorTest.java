@@ -22,6 +22,8 @@ public class SaveCalculatorTest {
 
     }
 
+    // 8 Tests zu Summe ( Aufgabe Äquivalenzklassen)
+
     @Test
     public void testSummeZweiPositiveIstOk() {
         int value1 = 10;
@@ -35,6 +37,59 @@ public class SaveCalculatorTest {
         int value2= (-20);
         assertTrue(testee.summe(value1,value2)==(-30));
     }
+
+    @Test
+    public void testSummePositiveNegativeOK(){
+        int value1 = 10;
+        int value2= (-20);
+        assertTrue(testee.summe(value1,value2)==(-10));
+    }
+
+    @Test
+    public void testNegativeWithZero(){
+        int value1 = 0;
+        int value2= (-20);
+        assertTrue(testee.summe(value1,value2)==(-20));
+    }
+
+    @Test
+    public void testPositveWithZero(){
+        int value1 = 10;
+        int value2= 0;
+        assertTrue(testee.summe(value1,value2)==10);
+    }
+
+    //Fails, weil max value überschritten wird
+    @Test
+    public void testNumberWithMaxValue(){
+        int value1 = 10;
+        int value2= Integer.MAX_VALUE;
+        assertTrue(testee.summe(value1,value2)==(Integer.MAX_VALUE + 10));
+    }
+
+    @Test
+    public void testNumberWithMinValue(){
+        int value1 = 10;
+        int value2= Integer.MIN_VALUE;
+        assertTrue(testee.summe(value1,value2)==(Integer.MIN_VALUE + 10));
+    }
+
+    @Test
+    public void testWithExceptions() throws ArithmeticException {
+        int value1 = 10;
+        int value2= 20;
+        assertTrue(testee.summe(value1,value2)==30);
+    }
+
+
+    @Test
+    public void testDifferenzWithZweiPositiveIsOk() {
+        int value1 = 10;
+        int value2= 5;
+        assertTrue(testee.differenz(value1,value2)==5);
+    }
+
+
 
     //ExceptionHandling
     @Test(expected=ArithmeticException.class)
@@ -53,12 +108,7 @@ public class SaveCalculatorTest {
 
 
 
-    @Test
-    public void testDifferenzWithZweiPositiveIsOk() {
-        int value1 = 10;
-        int value2= 5;
-        assertTrue(testee.differenz(value1,value2)==5);
-    }
+
 
     @Test
     public void multiplikation() {
