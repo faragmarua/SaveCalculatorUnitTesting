@@ -9,6 +9,10 @@ import static org.junit.Assert.*;
 
 public class SaveCalculatorTest {
 
+    //Protected Methods: Place your tests in the same package as the classes under test.
+    //Private Methods: Testing private methods may be an indication that those methods should be moved into another class to promote reusability.
+
+
     private SaveCalculator testee = new SaveCalculator();
 
 
