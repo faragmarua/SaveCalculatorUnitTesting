@@ -36,6 +36,22 @@ public class SaveCalculatorTest {
         assertTrue(testee.summe(value1,value2)==(-30));
     }
 
+    @Test(expected=ArithmeticException.class)
+    public void testArithmeticException() {
+        ArrayList emptyList = new ArrayList();
+        Object o = emptyList.get(0);
+    }
+
+    @Test
+    public void testArithmeticExceptionNotRaised()
+            throws ArithmeticException {
+
+        ArrayList emptyList = new ArrayList();
+        Object o = emptyList.get(0);
+    }
+
+
+
     @Test
     public void testDifferenzWithZweiPositiveIsOk() {
         int value1 = 10;
