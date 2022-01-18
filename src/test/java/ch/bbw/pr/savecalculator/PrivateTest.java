@@ -21,6 +21,8 @@ public class PrivateTest {
     }
 
     //Versucht reflection umzusetzen, funktioniert leider noch nicht
+    //Um die Äquvalenzklassen Tests zu implementieren musst ich die Methode
+    //von private wider auf public setzen
     @Test
     public void testDividendWorks() throws Exception {
 
