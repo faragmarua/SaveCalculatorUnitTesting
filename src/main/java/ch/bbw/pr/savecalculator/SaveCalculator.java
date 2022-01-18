@@ -18,7 +18,7 @@ public class SaveCalculator {
 	}
 
 
-	protected int differenz(int minuend, int subtrahend) throws ArithmeticException {
+	public int differenz(int minuend, int subtrahend) throws ArithmeticException {
 		long value = (long) minuend - (long) subtrahend;
 		if ((value > Integer.MAX_VALUE) || (value < Integer.MIN_VALUE)) {
 			throw new ArithmeticException();
@@ -36,7 +36,7 @@ public class SaveCalculator {
 	}
 
 
-	public double multiplikation(int faktor1, int faktor2) throws ArithmeticException {
+	protected double multiplikation(int faktor1, int faktor2) throws ArithmeticException {
 		long value = (long) faktor1 * (long) faktor2;
 		if ((value > Integer.MAX_VALUE) || (value < Integer.MIN_VALUE)) {
 			throw new ArithmeticException();
