@@ -38,6 +38,14 @@ public class SaveCalculatorTest {
         Object o = emptyList.get(0);
     }
 
+    @Test
+    public void testArithmeticExceptionNotRaised()
+            throws ArithmeticException {
+
+        ArrayList emptyList = new ArrayList();
+        Object o = emptyList.get(0);
+    }
+
 
 
     @Test
